@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Rasmus Nurro</title>
+<title>Portfolio: Rasmus Nurro</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="icon" href="/kuvat/favicon.ico" type=”image/x-icon”>
+<link rel="icon" href="/kuvat/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: "Lato", sans-serif}
+body {font-family: "Italic", sans-serif}
 .mySlides {display: none}
+.w3-btn {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 24px;
+  padding: 16px;
+}
+
+.w3-btn.w3-display-left {
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.w3-btn.w3-display-right {
+  right: 0;
+  transform: translateY(-50%);
+}
+
+a:link {
+  text-decoration: none;
+  color:#0000ff;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #800080;
+}
+
+a:hover {
+  text-decoration: underline;
+  color:#ffcc00;
+}
+
+a:active {
+  text-decoration: underline;
+}
 </style>
 </head>
-<body>
+<body class="w3-sand">
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
+  <div class="w3-bar w3-brown w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="#Tietoa" class="w3-bar-item w3-button w3-padding-large w3-hide-small">INFOA</a>
@@ -40,67 +77,70 @@ body {font-family: "Lato", sans-serif}
   <div class="mySlides w3-display-container w3-center">
     <img src="/kuvat/sorttaus.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-padding-32 w3-hide-small">
-      <h3><b>Sorttaus Ohjelma</b></h3>
-      <p>Saa järjestykseen tiedostot tietokoneelta</p>   
+      <h3><b><a href="https://github.com/RasmusNurro/Sorttaus-ohjelma">Sorttaus Ohjelma</a></b></h3>
+      <p>Sorttaus-ohjelma on skripti, joka helpottaa tiedostojen järjestämistä kansioihin niiden tiedostopäätteiden perusteella. Ohjelma tarjoaa kaksi päätoimintoa: kopioivan sorttauksen ja lajittelevan sorttauksen. Näiden lisäksi ohjelma voi kääntää koodit valmiiksi .exe-tiedostoiksi käyttämällä PyInstalleria.</p>   
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
     <img src="/kuvat/bussiaikataulu.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container  w3-padding-32 w3-hide-small">
-      <h3><b>Pythonilla tehty bussiaikataulu ohjelma</b></h3>
-      <p>Pystyy hyvin katsomaan tietyn föli bussin aikataulun</p>    
+      <h3><b><a href="https://github.com/RasmusNurro/bus-schedule/">Pythonilla tehty bussiaikataulu ohjelma</a></b></h3>
+      <p>Bussiaikatauluohjelma käyttää Foliin (Turun joukkoliikenteen) tarjoamaa APIa reaaliaikaisen bussiliikenteen aikataulutiedon hakemiseen. Ohjelma pyytää käyttäjältä pysäkin numeron ja näyttää lähtevien bussien aikataulut sekä niiden saapumisajan arvioidun poikkeaman.</p>    
     </div>
   </div>
+  
+  <a class="w3-btn w3-display-left w3-hover-opacity" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="w3-btn w3-display-right w3-hover-opacity" onclick="plusSlides(1)">&#10095;</a>
+
   </div>
 
   <!-- The Band Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Tietoa">
     <h2 class="w3-wide">Minusta tietoa</h2>
     <p class="w3-opacity"><i>Olen kova saunomaan</i></p>
-    <p class="w3-justify">Olen ensimmäisen vuoden tieto- ja viestinätekniikan opiskelija oulun ammattikorkeakoulussas. Harrastuksiini kuuluu raudan pumppaaminen, saunominen, avantouinti, sulkapallo, padel ja vaikka mitä. 
-
-Itsellä on tapa yrittää tehdä asioita mahdollisimmman optimoidusti ja siististi, sekä omasta mielestä nopeasti :). </p>
+    <p class="w3-justify">Olen ensimmäisen vuoden tieto- ja viestinätekniikan opiskelija Oulun ammattikorkeakoulussa. Vaikka opinnot ovat vasta alussa, minulla löytyy jo vahva halu kehittää itseäni jatkuvasti ja oppia kaikkea uutta. Innostun helposti uusista haasteista ja rakastan syventää osaamistani kaikessa mitä teen.
+  <br><br>Vapaa-ajalla yritän löytää tasapainoa urheilun ja rentoutumisen välillä. Raudan pumppaaminen ja saunominen ovat viikottaisia rutiineja. Avantouinti virkistää ja herättää hyvin uuteen päivään. Pelaan kanssa sulkapalloa ja padel kavereitten kanssa, joka auttaa parantamaan kuntopa ja tulee pidettyä hauskaa itsensä haastamisen kanssa. 
+  <br><br>Tavoitteeni elämässä on yksinkertainen: teen asiat mahdollisimman optimoidusti, siististi ja nopeasti, mutta en unohda nauttia matkasta. Uskon, että parhaat tulokset syntyvät, kun työn ja rentoutumisen tasapaino on kohdallaan. Nautin siitä, että voin yhdistää tehokkuuden ja luovuuden, niin työssä kuin vapaa-ajallakin.</p>
     <div class="w3-row w3-padding-32">
         <p>Rasmus Nurro</p>
         <img src="/kuvat/omakuva.jpg" class="w3-round w3-margin-bottom" alt="Rasmus Nurro" style="width:60%">
         <p class="w3-justify w3-center">rasmus.nurro2@gmail.com <br> +358 44 332 8251</p>
       </div>
   </div>
-  <!-- The Contact Section -->
+  <!-- Kontaktointi -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="KONTAKTOI">
-    <h2 class="w3-wide w3-center">Kiinnostunut yhteistyöstä</h2>
+    <h2 class="w3-wide w3-center">Ota yhteyttä</h2>
     <p class="w3-opacity w3-center"><i>Kontaktointi lomake</i></p>
     <div class="w3-row w3-padding-32">
       <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Oulu, Suomi<br>
-        <i class="fa fa-phone" style="width:30px"></i> Pho numero: +358 44 3328251<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: rasmus.nurro2@gmail.com<br>
+        <i class="fa fa-map-marker w3-text-brown" style="width:30px"></i> Oulu, Suomi<br>
+        <i class="fa fa-phone w3-text-teal" style="width:30px"></i> Pho numero: +358 44 3328251<br>
+        <i class="fa fa-envelope w3-text-deep-orange" style="width:30px"> </i> Email: rasmus.nurro2@gmail.com<br>
       </div>
       <div class="w3-col m6">
         <form method="POST" action="https://formspree.io/f/xjkgvnqy" target="_blank">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+              <input class="w3-input w3-border w3-round" type="text" placeholder="Nimi" required name="Name">
             </div>
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+              <input class="w3-input w3-border w3-round" type="text" placeholder="Sähköposti" required name="Email">
             </div>
           </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <input class="w3-input w3-border w3-round" type="text" placeholder="Viesti" required name="Message">
           <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
         </form>
       </div>
     </div>
   </div>
   
-<!-- End Page Content -->
 </div>
 
-<!-- Image of location/map -->
+<!-- Kuva koodauksesta -->
 <img src="/kuvat/koodaus.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-pale-green w3-xlarge">
   <a href="https://www.facebook.com"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
   <i class="fa fa-instagram w3-hover-opacity"></i>
   <i class="fa fa-snapchat w3-hover-opacity"></i>
@@ -110,19 +150,37 @@ Itsellä on tapa yrittää tehdä asioita mahdollisimmman optimoidusti ja siisti
 
 <script>
 // Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
+var slideIndex = 0;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n >= slides.length) {slideIndex = 0}    
+  if (n < 0) {slideIndex = slides.length - 1}    
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slides[slideIndex].style.display = "block";  
+}
+
+// Automaattinen slideshow
 carousel();
 
 function carousel() {
   var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
   }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000); // Vaihda kuva 4 sekunnin välein
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
