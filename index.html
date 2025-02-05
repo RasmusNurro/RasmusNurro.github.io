@@ -30,22 +30,22 @@ body {font-family: "Italic", sans-serif}
   transform: translateY(-50%);
 }
 
-a:link {
+.linkki:link {
   text-decoration: none;
   color:#0000ff;
 }
 
-a:visited {
+.linkki:visited {
   text-decoration: none;
   color: #800080;
 }
 
-a:hover {
+.linkki:hover {
   text-decoration: underline;
   color:#ffcc00;
 }
 
-a:active {
+.linkki:active {
   text-decoration: underline;
 }
 </style>
@@ -65,7 +65,7 @@ a:active {
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-text-black" onclick="myFunction()">HOME</a>
   <a href="#PROJEKTIT" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PROJEKTIT</a>
   <a href="#KONTAKTOI" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">KONTAKTOI</a>
 </div>
@@ -77,14 +77,14 @@ a:active {
   <div class="mySlides w3-display-container w3-center">
     <img src="/kuvat/sorttaus.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-padding-32 w3-hide-small">
-      <h3><b><a href="https://github.com/RasmusNurro/Sorttaus-ohjelma">Sorttaus Ohjelma</a></b></h3>
+      <h3><b><a href="https://github.com/RasmusNurro/Sorttaus-ohjelma" class="linkki">Sorttaus Ohjelma</a></b></h3>
       <p>Sorttaus-ohjelma on skripti, joka helpottaa tiedostojen järjestämistä kansioihin niiden tiedostopäätteiden perusteella. Ohjelma tarjoaa kaksi päätoimintoa: kopioivan sorttauksen ja lajittelevan sorttauksen. Näiden lisäksi ohjelma voi kääntää koodit valmiiksi .exe-tiedostoiksi käyttämällä PyInstalleria.</p>   
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
     <img src="/kuvat/bussiaikataulu.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container  w3-padding-32 w3-hide-small">
-      <h3><b><a href="https://github.com/RasmusNurro/bus-schedule/">Pythonilla tehty bussiaikataulu ohjelma</a></b></h3>
+      <h3><b><a href="https://github.com/RasmusNurro/bus-schedule/" class="linkki">Pythonilla tehty bussiaikataulu ohjelma</a></b></h3>
       <p>Bussiaikatauluohjelma käyttää Foliin (Turun joukkoliikenteen) tarjoamaa APIa reaaliaikaisen bussiliikenteen aikataulutiedon hakemiseen. Ohjelma pyytää käyttäjältä pysäkin numeron ja näyttää lähtevien bussien aikataulut sekä niiden saapumisajan arvioidun poikkeaman.</p>    
     </div>
   </div>
