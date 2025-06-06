@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valuuttamuunnin</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>    
+      body {
+        background-color: #F4F4F4; /* Light gray background */
+        color: #333333; /* Dark charcoal text */
+    }
+
+    .converter {
+      max-width: 400px;
+      margin: auto;
+      margin-top: 100px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #8c9aaa;
+    }
+  </style>
+</head>
+<body>
+
+<div class="converter w3-card">
+  <h2 class="w3-center">Valuuttamuunnin</h2>
+  <div class="w3-section">
+    <label>Lähtövaluutta:</label>
+    <select id="fromCurrency" class="w3-select w3-border">
+      <option value="EUR">Euro (EUR)</option>
+      <option value="USD">Yhdysvaltain dollari (USD)</option>
+    </select>
+  </div>
+  <div class="w3-section">
+    <label>Summa:</label>
+    <input id="amount" class="w3-input w3-border" type="number" placeholder="Esim. 100">
+  </div>
+  <div class="w3-section">
+    <label>Kohdevaluutta:</label>
+    <select id="toCurrency" class="w3-select w3-border">
+      <option value="GBP">Englannin punta (GBP)</option>
+      <option value="JPY">Japanin jeni (JPY)</option>
+      <option value="SEK">Ruotsin kruunu (SEK)</option>
+    </select>
+  </div>
+  <button onclick="convertCurrency()" class="w3-button w3-brown w3-margin-top w3-block">Muunna</button>
+  <h3 id="result" class="w3-center w3-margin-top"></h3>
+  <form>
+    <input type="button" value="Takaisinpäin!" onclick="history.back()">
+  </form>
+</div>
+<script>
+  async function convertCurrency() {
+    const amount = parseFloat(document.getElementById("amount").value);
+    const from = document.getElementById("fromCurrency").value;
+    const to = document.getElementById("toCurrency").value;
+    const apiKey = 'e8621a083b9526452865e5fd1ea04f05'; // Replace with your actual API key
+
+    if (isNaN(amount)) {
+      document.getElementById("result").textContent = "Anna kelvollinen summa.";
+      return;
+    }
+
+    try {
+      const res = await fetch(`http://api.currencylayer.com/live?access_key=${apiKey}&currencies=${from},${to}&format=1`);
+      const data = await res.json();
+
+      if (!data.success) {
+        document.getElementById("result").textContent = "Valuuttakurssia ei voitu hakea.";
+        console.error(data.error);
+        return;
+      }
+
+      const usdToFrom = data.quotes[`USD${from}`];
+      const usdToTo = data.quotes[`USD${to}`];
+
+      const fromToTo = usdToTo / usdToFrom;
+      const converted = amount * fromToTo;
+
+      document.getElementById("result").textContent = `${amount.toFixed(2)} ${from} = ${converted.toFixed(2)} ${to}`;
+    } catch (error) {
+      console.error("API error:", error);
+      document.getElementById("result").textContent = "Valuuttakurssia ei voitu hakea.";
+    }
+  }
+</script>
+
+</body>
+</html>
