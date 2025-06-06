@@ -1,0 +1,97 @@
+/* General Styles */
+    body {
+        background-color: #F4F4F4; /* Light gray background */
+        color: #333333; /* Dark charcoal text */
+    }
+  
+  /* Navbar */
+  .w3-top {
+    z-index: 1000;
+  }
+  
+  
+    .w3-brown {
+        background-color: #0056b3 !important; /* Deep blue navbar */
+    }
+  
+  .w3-bar .w3-button {
+    transition: background-color 0.3s ease;
+  }
+  
+  .w3-bar .w3-button:hover {
+    background-color: #5d4037 !important;
+  }
+  
+  /* Hero Section */
+  .mySlides {
+    display: none;
+    position: relative;
+  }
+  
+  .w3-display-container {
+    position: relative;
+  }
+  
+  .w3-display-bottommiddle {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .linkki {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .linkki:hover {
+    color: #ffcc00;
+  }
+  
+  /* About Section */
+  .w3-content {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .w3-round {
+    border-radius: 10px;
+  }
+  
+  /* Contact Section */
+  .w3-input {
+    margin-bottom: 10px;
+  }
+
+  .w3-button:hover {
+    background-color: #FF4C4C; /* Darker coral on hover */
+}
+
+  
+  .w3-card {
+    background-color: #FFFFFF; /* White card background */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Light shadow */
+    border-radius: 8px; /* Rounded corners for cards */
+    padding: 16px; /* Padding inside cards */
+}
+
+/* Round top corners for images in cards */
+.w3-card img {
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    width: 100%; /* Full width images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+  /* Footer */
+  .w3-pale-green {
+    background-color: #f1f8e9 !important;
+  }
+  
+  .w3-xlarge i {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .w3-xlarge i:hover {
+    transform: scale(1.2);
+  }
